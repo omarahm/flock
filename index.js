@@ -18,9 +18,10 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/api', require('./app/routes/api/index')(app));
-app.use('/api', require('./app/routes/api/projects')(app));
+//API routes
+app.use('/api', require('./app/routes/api/projects'));
 
+//Frontend routes
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
