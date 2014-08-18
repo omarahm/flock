@@ -1,8 +1,11 @@
-var express = require('express');
-var router = express.Router();
+express = require('express');
+router = express.Router();
 
 router.get('/projects', function(req, res) {
-	res.render('index', { title: 'Projects' });
+	
+	Project = require('../../models/project');
+
+	res.json({message: 'kollo fel kletch!'});
 });
 
 module.exports = router;
